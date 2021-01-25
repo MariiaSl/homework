@@ -25,7 +25,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.header-menu-item {
+.header-menu-item + .header-menu-item {
   margin-left: 72px;
 }
 .header-menu-link {
