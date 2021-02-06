@@ -1,17 +1,23 @@
+/* стоит ли так убирать горизонтальный скролл?*/
+html,
+body {
+  overflow-x: hidden;
+}
+
 .page-body {
   font-family: sans-serif;
-  width: 1900px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
 a {
   text-decoration: none;
 }
+
 .container {
   width: 1900px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .section-title {
   font-weight: bold;
   font-size: 27px;
@@ -20,15 +26,7 @@ a {
   text-transform: uppercase;
   margin: 0 auto;
   padding-bottom: 52px;
-}
-.section-title:first-child {
-  padding-left: 810px;
-}
-.section-title:nth-last-child(2) {
-  padding-left: 868px;
-}
-.section-title:nth-last-child(3) {
-  padding-left: 873px;
+  text-align: center;
 }
 
 .page-header {
@@ -40,13 +38,12 @@ a {
 .page-logo {
   display: flex;
   align-items: center;
-}
-.logo-name {
   font-weight: bold;
   font-size: 22px;
   line-height: 30px;
   color: #ffffff;
 }
+
 .logo-image {
   width: 27px;
   height: 27px;
@@ -69,34 +66,47 @@ a {
 .header-menu-link:hover {
   color: #14b9d5;
 }
-.header-serch {
-  background: #000000;
+.header-search {
+  background-color: #000000;
   width: 68px;
   color: #ffffff;
   text-align: center;
   padding-top: 27px;
   padding-bottom: 26px;
+  border: 0;
+  cursor: pointer;
 }
+.header-search:focus {
+  outline: none;
+}
+
 .top-banner {
   background-image: url(../Images/header-bg.jpeg);
   height: 369px;
 
   display: flex;
   flex-direction: column;
+
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .top-banner-title {
   font-weight: bold;
   font-size: 27px;
   line-height: 37px;
   padding-top: 164px;
   padding-bottom: 44px;
-  padding-left: 658px;
+  text-align: center;
   margin: 0;
   color: #ffffff;
 }
 .top-banner-container {
   display: flex;
   margin-bottom: 74px;
+  justify-content: center;
 }
 .top-banner-link {
   border-radius: 5px;
@@ -114,7 +124,6 @@ a {
 }
 .top-banner-link:first-child {
   background-color: #89ca62;
-  margin-left: 797px;
 }
 .top-banner-link:nth-child(2) {
   background-color: #14b9d5;
@@ -160,6 +169,11 @@ a {
   background-image: url(../Images/parallax-bg.jpeg);
   padding-top: 108px;
   padding-bottom: 191px;
+
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .clients-section-title {
   font-weight: bold;
@@ -168,14 +182,17 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto 87px;
+  margin: 0;
 }
-.clients-section-line {
+
+.clients-section-title::after {
+  content: "";
+  display: block;
   width: 60px;
   height: 3px;
   border: none;
   background-color: #18b4cf;
-  margin: 0 auto;
+  margin: 87px auto 106px;
 }
 .clients-list {
   display: grid;
