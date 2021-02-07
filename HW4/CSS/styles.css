@@ -1,9 +1,3 @@
-/* стоит ли так убирать горизонтальный скролл?*/
-html,
-body {
-  overflow-x: hidden;
-}
-
 .page-body {
   font-family: sans-serif;
 }
@@ -210,10 +204,14 @@ a {
 .gallery-list {
   list-style: none;
   display: grid;
+  grid-template-columns: repeat(7, 1fr);
   grid-auto-flow: column;
   justify-content: center;
   padding-left: 0;
   margin: 0 auto;
+}
+.gallery-list-image {
+  width: 100%;
 }
 
 .news {
@@ -253,6 +251,7 @@ a {
 .news-list-item:nth-child(2) {
   grid-area: elem2;
   margin-left: 17.5px;
+
   align-items: center;
 }
 .news-list-item:nth-child(3) {
@@ -309,20 +308,23 @@ a {
 }
 
 .page-footer {
-  display: grid;
-  height: 80px;
   background-color: #000000;
-  grid-template-columns: 44% 1.9fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  text-align: right;
 }
-
+.container_footer {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  width: 1167px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .copyright {
   font-size: 13px;
   line-height: 13px;
   color: #ffffff;
-}
-.footer-logo {
-  padding-left: 360px;
+  margin: 0;
 }
