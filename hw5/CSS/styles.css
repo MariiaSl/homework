@@ -1,0 +1,208 @@
+.page-body {
+  font-family: sans-serif;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 46px;
+}
+.container::before {
+  content: "";
+  background-image: url(../Images/backgroumdImg.png);
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-link {
+  display: grid;
+  grid-template-columns: 53px 1fr;
+  grid-template-areas:
+    "image  milan"
+    "image  holidays";
+  margin-bottom: 17px;
+}
+.orange-logo-image {
+  display: none;
+}
+.header-logo-link:hover .white-logo-image {
+  display: none;
+}
+.header-logo-link:hover .orange-logo-image {
+  display: block;
+}
+.header-logo-link:hover .milan,
+.header-logo-link:hover .holidays {
+  color: #f26522;
+}
+
+.header-logo-image {
+  grid-area: image;
+  width: 53px;
+  height: 47px;
+}
+
+.milan,
+.holidays {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.milan {
+  grid-area: milan;
+  font-size: 29px;
+  line-height: 29px;
+}
+.holidays {
+  grid-area: holidays;
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 17px;
+  text-align: end;
+}
+.contact-email,
+.contact-tel {
+  color: #ffffff;
+}
+.contact-email:hover,
+.contact-tel:hover {
+  color: #f26522;
+  transition: 0.5s;
+}
+
+.contact-email + .contact-tel {
+  margin-top: 19px;
+}
+
+.tours-list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  grid-gap: 37px;
+  padding-left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.tours-list-item {
+  list-style: none;
+  position: relative;
+}
+
+.tours-list-details {
+  margin: 0;
+}
+
+.tours-list-image {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to top, black, white);
+}
+
+.tours-list-text {
+  background-color: #f26522;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, 27.5px);
+  grid-template-areas:
+    " elem1 elem1"
+    " elem2 elem3";
+
+  width: 300px;
+}
+.tours-list-text--hover {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 165px;
+}
+.tours-list-item:hover .tours-list-text--hover {
+  display: block;
+}
+.tours-list-item:hover .tours-list-title {
+  color: #f26522;
+  /* transition: 0.5s; */
+}
+
+.tours-list-title {
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.tours-text-items {
+  margin: 0 0 0 16px;
+  color: #ffffff;
+}
+.tours-text-items:nth-child(1) {
+  grid-area: elem1;
+  font-size: 10px;
+  line-height: 10px;
+}
+.tours-text-items:nth-child(2) {
+  grid-area: elem2;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+.tours-text-items:nth-child(3) {
+  grid-area: elem3;
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 10px;
+}
+.tours-text-items:nth-child(3)::after {
+  content: "";
+  border: 1px solid #ffffff;
+  border-left: transparent;
+  border-top: transparent;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  transform: rotate(-45deg);
+  margin-left: 11px;
+  vertical-align: middle;
+}
+
+.footer-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 49px;
+  padding-bottom: 15px;
+  margin: 0;
+}
