@@ -1,0 +1,310 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+input::placeholder {
+  color: #bebebe;
+}
+
+.page-header {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 79px;
+  align-items: center;
+}
+.page-header:hover {
+  background-color: #000000;
+  opacity: 0.41;
+  transition: 0.3s ease-in-out;
+}
+.page-header:not(:hover) {
+  transition: 0.3s;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header-link:first-child {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.header-link:hover,
+.header-login:hover {
+  color: #01813f;
+}
+
+.header-text {
+  margin-left: 27px;
+}
+
+/* header-icon:nth-child(3)::after 
+*  или 
+*  compas::after с правилом ниже, при .header-link{position: relative} не работает  
+*  header-text::before не дает центрировать линию посредине
+*/
+
+.header-text::after {
+  content: "";
+  width: 1px;
+  height: 19px;
+  background-color: rgba(255, 255, 255, 0.9);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  position: absolute;
+  top: 11px;
+  right: 197px;
+}
+
+.header-icon {
+  fill: #ffffff;
+  padding-right: 25px;
+}
+.header-icon:hover {
+  fill: #01813f;
+}
+
+.header-text,
+.header-login {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.form {
+  width: 444px;
+  margin: 54px auto;
+}
+.form::before {
+  content: "";
+  background-image: url(../Images/background.png);
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 74px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.form-conainer {
+  padding: 31px 60px 38px;
+  background: #ffffff;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.52);
+  display: grid;
+}
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-title {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #434343;
+  position: relative;
+}
+
+.form-title::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  right: 108px;
+  background-color: #3cb878;
+  position: absolute;
+}
+.form-link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3cb878;
+}
+.form-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+}
+
+.facebook,
+.google {
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+}
+.facebook {
+  background-color: #305db8;
+  position: relative;
+}
+.facebook::before,
+.google::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 28px;
+  background-color: #0a162f;
+  opacity: 0.1;
+  left: 48px;
+}
+.facebook:hover {
+  background-color: #022263;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.google:hover {
+  background-color: #ab1f09;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.fb-icon {
+  margin-right: 19px;
+}
+.facebook-text {
+  margin: 0;
+  padding-right: 22px;
+}
+.google {
+  background: #df4a32;
+  position: relative;
+}
+.google-icon {
+  margin-right: 38px;
+  margin-left: 10px;
+}
+.google-text {
+  margin: 0;
+  padding-right: 27px;
+}
+.form-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848484;
+  margin-top: 32px;
+  margin-bottom: 11px;
+  text-align: center;
+  position: relative;
+}
+.form-text::before,
+.form-text::after {
+  content: "";
+  position: absolute;
+  width: 154px;
+  height: 1px;
+  left: 0px;
+  top: 8px;
+  background-color: #848484;
+  opacity: 0.1;
+}
+.form-text::after {
+  left: 170px;
+}
+
+.form__element {
+  margin-bottom: 15px;
+  padding: 16px 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+}
+.form__element:focus {
+  outline: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+}
+.checkbox-section {
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -999px;
+}
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -4px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.0001);
+  border: 1px solid #f2f2f2;
+}
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+
+  left: 3px;
+  top: -1px;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid #01813f;
+  border-bottom: 2px solid #01813f;
+  transform: rotate(-45deg) skewY(-14deg);
+}
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.form__label-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 28px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #434343;
+}
+.form--label-link {
+  color: #3cb878;
+}
+.form--label-link:hover,
+.form--label-link:focus,
+.form-link:hover,
+.form-link:focus {
+  border-bottom: 1px solid #3cb878;
+}
+
+.sumbmit {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 16px 99px;
+  background: rgba(60, 184, 120, 0.8);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.sumbmit:focus {
+  outline: none;
+}
