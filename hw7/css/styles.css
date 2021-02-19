@@ -24,7 +24,7 @@
   background-image: -webkit-linear-gradient(
     top,
     rgba(0, 0, 0, 1) 0%,
-    transparent 80%
+    transparent 100%
   );
 }
 
@@ -50,7 +50,7 @@
 
 .star-wars-content {
   position: relative;
-  /* transform-origin: 50% 100%; */
+  /* transform-origin: 50% 100%;  - видела в примере решения задачи, но не поняла на что влияет. Понимаю, что трансформация в таком случае будет в точке по центру снизу, но rotate и perspective и так разворачивают текст. */
 
   animation-name: content-animation;
   animation-duration: 30s;
@@ -70,11 +70,16 @@
     transform: translateZ(-1200px);
   }
 }
-
+/*автоплей работает, добавила панель для выключения музыки*/
 .background-audio {
-  position: absolute;
-  left: 0px;
+  position: fixed;
+  z-index: 1;
   top: 0;
+  left: 0;
   outline: none;
-  transform: scale(1.5);
+  opacity: 0.3;
+}
+
+.background-audio:hover {
+  opacity: 1;
 }
