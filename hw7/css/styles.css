@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "news_gothic";
+  src: url(../fonts/NewsGothicBT-Roman.woff);
+}
+
+.page-body {
+  font-family: "news_gothic", sans-serif;
+  background: url(https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  position: relative;
+}
+.page-body::after {
+  content: "";
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    transparent 80%
+  );
+}
+
+.star-wars {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-weight: 1000;
+  font-size: 40px;
+  color: #fcd000;
+
+  transform: perspective(250px) rotateX(30deg);
+}
+.page-title,
+.page-subtitle {
+  text-align: center;
+  font-size: 40px;
+}
+
+.star-wars-content {
+  position: relative;
+  /* transform-origin: 50% 100%; */
+
+  animation-name: content-animation;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+
+  transform: scale(1.5);
+}
+
+@keyframes content-animation {
+  0% {
+    top: 800px;
+  }
+  100% {
+    top: -1500px;
+    transform: translateZ(-1200px);
+  }
+}
+
+.background-audio {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  outline: none;
+  transform: scale(1.5);
+}
