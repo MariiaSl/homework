@@ -9,7 +9,18 @@ a {
 input::placeholder {
   color: #bebebe;
 }
-
+.page-body {
+  content: "";
+  background-image: url(../Images/background.png);
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 74px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
 .page-header {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -26,10 +37,13 @@ input::placeholder {
   transition: 0.3s;
 }
 
-.header-right {
+.header-list {
   display: flex;
   align-items: center;
   position: relative;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .header-link:first-child {
@@ -46,6 +60,8 @@ input::placeholder {
 
 .header-text {
   margin-left: 27px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* header-icon:nth-child(3)::after 
@@ -62,7 +78,7 @@ input::placeholder {
   mix-blend-mode: normal;
   opacity: 0.5;
   position: absolute;
-  top: 11px;
+  top: 5px;
   right: 197px;
 }
 
@@ -86,18 +102,7 @@ input::placeholder {
   width: 444px;
   margin: 54px auto;
 }
-.form::before {
-  content: "";
-  background-image: url(../Images/background.png);
-  position: absolute;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 74px;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
+
 .form-conainer {
   padding: 31px 60px 38px;
   background: #ffffff;
@@ -175,11 +180,12 @@ input::placeholder {
   transition: 0.2s;
 }
 .fb-icon {
-  margin-right: 19px;
+  margin-right: 18px;
+  margin-left: 16px;
 }
 .facebook-text {
   margin: 0;
-  padding-right: 22px;
+  padding-left: 18px;
 }
 .google {
   background: #df4a32;
