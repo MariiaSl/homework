@@ -34,6 +34,6 @@ do {
 } while (!n || n.trim() == "" || isNaN(+n) || n % 1 !== 0);
 for (let prime = m; prime <= n; prime++) {
   if (prime <= 1 || prime % 2 === 0 || prime % 3 === 0) continue;
-  console.log(prime); // не показывает 3 и 5, и пропускает 25 >:(  )
+  console.log(prime); // не показывает 2 и 3, и пропускает 25 >:(  )
 }
  */
