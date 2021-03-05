@@ -1,0 +1,97 @@
+/*
+1. Опишите своими словами, что такое метод обьекта
+
+*/
+
+"use strict";
+
+function createNewUser() {
+  let newUser = {
+    firstName: "",
+    getLogin() {
+      return this.firstName[0].toLowerCase();
+
+      // return (this.firstName[0] + this.lastName).toLowerCase();
+    },
+    // setFirstName(f_n) {
+    //   this.firstName = f_n;
+    // },
+    // setLastName(l_n) {
+    //   this.lastName = l_n;
+    // },
+  };
+
+  Object.defineProperty(newUser, "firstName", {
+    writable: false,
+    set(value) {
+      this.firstName = value;
+    },
+  });
+
+  Object.defineProperty(newUser, "setFirstName", {
+    get() {
+      return `${this.firstName}`;
+    },
+
+    set(value) {
+      this.firstName = value;
+    },
+  });
+
+  // Object.defineProperty(newUser, "firstName", {
+  //   writable: false,
+  // });
+  // Object.defineProperty(newUser, "lastName", {
+  //   writable: false,
+  // });
+  //Object.defineProperty(newUser, firstName);
+  return newUser;
+}
+
+//console.log(createNewUser(userName, userLastNme).getLogin());
+var user = createNewUser();
+
+let userName = prompt("Enter your name");
+user.setFirstName = userName;
+
+// let userLastNme = prompt("Enter your last name");
+// user.setLastName(userLastNme);
+
+console.log(user.getLogin());
+console.log(user.setFirstName);
+
+//define property - setter/getter
+//construktor funkzii
+
+
+function createNewUser() {
+  let newUser = {
+    firstName: "",
+    lastName: "",
+    getLogin() {
+      return (this.firstName[0] + this.lastName).toLowerCase();
+    },
+    setFirstName(newName) {
+      this.firstName = f_n;
+    },
+    setLastName(newLasName) {
+      this.lastName = l_n;
+    },
+  };
+  //Object.defineProperty(newUser, firstName);
+  return newUser;
+}
+
+//console.log(createNewUser(userName, userLastNme).getLogin());
+var user = createNewUser();
+
+let userName = prompt("Enter your name");
+user.setFirstName(userName);
+
+let userLastNme = prompt("Enter your last name");
+user.setLastName(userLastNme);
+
+console.log(user.getLogin());
+
+//define property - setter/getter
+//construktor funkzii
