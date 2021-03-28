@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./Images/favicon.jpeg"
+      type="image/x-icon"
+    />
+
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JS HW10</title>
+    <style>
+      .password-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .input-wrapper {
+        position: relative;
+        width: 200px;
+      }
+
+      .input-wrapper input {
+        min-width: 120px;
+        padding: 10px;
+        margin-bottom: 24px;
+      }
+
+      .input-wrapper i {
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        color: grey;
+      }
+
+      .btn {
+        width: 150px;
+      }
+      .closed {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="password-form" action="#" type="POST">
+      <label class="input-wrapper">
+        Ввести пароль
+        <input id="password1" type="password" autocomplete="off" />
+        <i id="icon1" class="fas fa-eye icon-password"></i>
+        <!-- <i class="fas fa-eye-slash icon-password"></i> -->
+      </label>
+      <label class="input-wrapper">
+        Подтвердить пароль
+        <input id="password2" type="password" autocomplete="off"/>
+        <i id="icon2" class="fas fa-eye icon-password"></i>
+        <!-- <i class="fas fa-eye-slash icon-password"></i> -->
+      </label>
+      <button type="submit" class="btn">Подтвердить</button>
+    </form>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
