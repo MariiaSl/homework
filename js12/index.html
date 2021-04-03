@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./Images/favicon.jpeg"
+      type="image/x-icon"
+    />
+
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JS HW12</title>
+    <style>
+      .image-to-show {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 400px;
+        height: 400px;
+      }
+
+      .images-wrapper {
+        position: relative;
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; */
+        margin: 0 auto;
+        width: 400px;
+      }
+
+      .buttons {
+        text-align: center;
+        position: relative;
+        top: 400px;
+      }
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="images-wrapper">
+      <img
+        src="./Images/1.jpg"
+        alt="image of game"
+        class="image-to-show show"
+      />
+      <img
+        src="./Images/2.jpg"
+        alt="image of game"
+        class="image-to-show hide"
+      />
+      <img
+        src="./Images/3.JPG"
+        alt="image of game"
+        class="image-to-show hide"
+      />
+      <img
+        src="./Images/4.png"
+        alt="image of game"
+        class="image-to-show hide"
+      />
+    </div>
+    <div class="buttons">
+      <button id="play-button">Play</button>
+      <button id="stop-button">Stop</button>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
